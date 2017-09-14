@@ -21,6 +21,29 @@ android {
     }
 }
 
+ext {
+    bintrayRepo = 'JenkinsTest'
+    bintrayName = 'jenkinstest'
+
+    publishedGroupId = 'org.vinayyam'
+    libraryName = 'jenkinstest'
+    artifact = 'jenkinstest'
+
+    libraryDescription = 'A library to test jenkins.'
+
+    siteUrl = 'https://github.com/bitfield66/jenkinstest'
+    gitUrl = 'https://github.com/bitfield66/jenkinstest.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'bitfield66'
+    developerName = 'bitfield'
+    developerEmail = 'vinayyam@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -29,3 +52,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
 }
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
